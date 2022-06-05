@@ -41,5 +41,3 @@ export const copy = async () => {
     console.log(e.message);
   }
 };
-
-copy();

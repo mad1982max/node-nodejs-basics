@@ -8,5 +8,10 @@ export const transform = async () => {
     },
   });
 
-  process.stdin.pipe(reverseTransStream).pipe(process.stdout);
+  process.stdin
+    .pipe(reverseTransStream)
+    .on("error", function (error) {
+      console.log(`error: ${error.message}`);
+    })
+    .pipe(process.stdout);
 };

@@ -18,7 +18,6 @@ export const list = async () => {
     const content = await readdir(recoursePath);
 
     //should leave only files
-
     //return arr with booleans values (true instead files names)
     const booleansArrWithFiles = await Promise.all(
       content.map(async (item) => {
